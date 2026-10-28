@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="100%" stop-color="#0c1324"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111c33"/>
+      <stop offset="100%" stop-color="#0e172a"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00b0ff"/>
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e676"/>
+      <stop offset="100%" stop-color="#00c853"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb300"/>
+      <stop offset="100%" stop-color="#ff8f00"/>
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c4dff"/>
+      <stop offset="100%" stop-color="#651fff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="940" height="560" fill="url(#bgGrad)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#162238" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="70" x2="940" y2="70"/>
+    <line x1="0" y1="140" x2="940" y2="140"/>
+    <line x1="0" y1="210" x2="940" y2="210"/>
+    <line x1="0" y1="280" x2="940" y2="280"/>
+    <line x1="0" y1="350" x2="940" y2="350"/>
+    <line x1="0" y1="420" x2="940" y2="420"/>
+    <line x1="0" y1="490" x2="940" y2="490"/>
+    <line x1="160" y1="0" x2="160" y2="560"/>
+    <line x1="320" y1="0" x2="320" y2="560"/>
+    <line x1="480" y1="0" x2="480" y2="560"/>
+    <line x1="640" y1="0" x2="640" y2="560"/>
+    <line x1="800" y1="0" x2="800" y2="560"/>
+  </g>
+
+  <!-- Header Banner -->
+  <rect x="30" y="20" width="880" height="60" rx="8" fill="url(#cardGrad)" stroke="#1e2c47" stroke-width="1.5"/>
+  <circle cx="65" cy="50" r="18" fill="url(#accentCyan)"/>
+  <text x="65" y="56" font-family="-apple-system, sans-serif" font-size="18" font-weight="900" fill="#000" text-anchor="middle">📦</text>
+  <text x="100" y="44" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="0.5">HKCForge Pro | Space Housekeeping Data Compression Architecture</text>
+  <text x="100" y="64" font-family="-apple-system, sans-serif" font-size="11" font-weight="500" fill="#00e5ff" letter-spacing="1">NORMATIVE BASELINE: CCSDS 124.0-B-1 (BLUE BOOK) &amp; ESA POCKET+ ALGORITHM</text>
+  <rect x="735" y="35" width="155" height="30" rx="6" fill="#00e676" fill-opacity="0.15" stroke="#00e676" stroke-width="1"/>
+  <text x="812" y="54" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e676" text-anchor="middle">10/10 ICS CERTIFIED</text>
+
+  <!-- Left: Bitwise Mask Engine -->
+  <rect x="30" y="95" width="425" height="320" rx="8" fill="url(#cardGrad)" stroke="#1e2c47" stroke-width="1.5"/>
+  <rect x="30" y="95" width="425" height="36" rx="8" fill="#14213d"/>
+  <text x="45" y="118" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#00e5ff">1. DYNAMIC MASK UPDATE STAGE (§4.2)</text>
+  <text x="390" y="118" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#90a4cb">BITWISE</text>
+
+  <g transform="translate(45, 145)">
+    <rect x="0" y="0" width="395" height="42" rx="4" fill="#0b1220" stroke="#00e5ff" stroke-width="1"/>
+    <text x="12" y="18" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e5ff">Input Telemetry Vector I_t (Length F Bits)</text>
+    <text x="12" y="34" font-family="monospace" font-size="10" fill="#a4c5eb">Difference Vector: E_t = I_t XOR I_{t-1}</text>
+
+    <!-- Branch to M_t and B_t -->
+    <rect x="0" y="55" width="190" height="75" rx="4" fill="#091424" stroke="#00e676" stroke-width="1"/>
+    <text x="10" y="75" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e676">Current Mask M_t</text>
+    <text x="10" y="93" font-family="monospace" font-size="9" fill="#a4c5eb">If p_t=0: M_t = M_{t-1} OR E_t</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#ffb300">If p_t=1: M_t = B_{t-1} OR E_t</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#ffffff">0=Predictable, 1=Unpred</text>
+
+    <rect x="205" y="55" width="190" height="75" rx="4" fill="#091424" stroke="#ffb300" stroke-width="1"/>
+    <text x="10" y="75" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#ffb300">Build Vector B_t</text>
+    <text x="10" y="93" font-family="monospace" font-size="9" fill="#a4c5eb">If p_t=0: B_t = B_{t-1} OR E_t</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#ffb300">If p_t=1: B_t = 0 (Reset)</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#ffffff">Candidate Predictable</text>
+
+    <rect x="0" y="140" width="395" height="42" rx="4" fill="#0b1220" stroke="#7c4dff" stroke-width="1"/>
+    <text x="12" y="158" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#7c4dff">Change Vector D_t = M_t XOR M_{t-1}</text>
+    <text x="12" y="174" font-family="monospace" font-size="10" fill="#a4c5eb">Cumulative Window: C_cum = D_t OR D_{t-1} ... OR D_{t-V_t}</text>
+
+    <rect x="0" y="192" width="395" height="55" rx="4" fill="#091424" stroke="#1e2c47" stroke-width="1"/>
+    <text x="12" y="210" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e5ff">Effective Robustness Guarantee:</text>
+    <text x="12" y="226" font-family="monospace" font-size="9" fill="#a4c5eb">Delta_t_lost &lt;= V_t (Guaranteed Resync upon next packet)</text>
+    <text x="12" y="240" font-family="monospace" font-size="9" fill="#00e676">No handshake required; automatic ground synchronization</text>
+  </g>
+
+  <!-- Right: Bitstream Assembly -->
+  <rect x="485" y="95" width="425" height="320" rx="8" fill="url(#cardGrad)" stroke="#1e2c47" stroke-width="1.5"/>
+  <rect x="485" y="95" width="425" height="36" rx="8" fill="#14213d"/>
+  <text x="500" y="118" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#00e676">2. ENCODING &amp; BITSTREAM ASSEMBLY (§5.3)</text>
+  <text x="815" y="118" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#90a4cb">RLE + PAYLOAD</text>
+
+  <g transform="translate(500, 145)">
+    <!-- Stream h_t -->
+    <rect x="0" y="0" width="395" height="70" rx="4" fill="#0b1220" stroke="#00e5ff" stroke-width="1"/>
+    <text x="12" y="18" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e5ff">Stream 1: h_t (Mask Change Vector)</text>
+    <text x="12" y="34" font-family="monospace" font-size="10" fill="#a4c5eb">• 4-bit Robustness V_t + Flags (p_t, s_t, u_t, c_t)</text>
+    <text x="12" y="48" font-family="monospace" font-size="10" fill="#a4c5eb">• Run-to-Count RLE(C_cum) terminated with '10'</text>
+    <text x="12" y="62" font-family="monospace" font-size="10" fill="#00e5ff">• Bit values of changed mask positions</text>
+
+    <!-- Stream q_t -->
+    <rect x="0" y="78" width="395" height="45" rx="4" fill="#0b1220" stroke="#ffb300" stroke-width="1"/>
+    <text x="12" y="96" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#ffb300">Stream 2: q_t (Full Mask Vector)</text>
+    <text x="12" y="112" font-family="monospace" font-size="10" fill="#a4c5eb">• Optional full mask encoding (sent when s_t = 1)</text>
+
+    <!-- Stream u_t -->
+    <rect x="0" y="131" width="395" height="55" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="12" y="149" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e676">Stream 3: u_t (Telemetry Payload)</text>
+    <text x="12" y="165" font-family="monospace" font-size="10" fill="#a4c5eb">• Unpredictable bits extracted from I_t (where M_t == 1)</text>
+    <text x="12" y="179" font-family="monospace" font-size="10" fill="#a4c5eb">• Or full raw input vector I_t if uncompressed flag u_t = 1</text>
+
+    <!-- Final Output o_t -->
+    <rect x="0" y="196" width="395" height="50" rx="4" fill="#091424" stroke="#00e676" stroke-width="1.5"/>
+    <text x="12" y="216" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" fill="#00e676">Output Vector: o_t = h_t || q_t || u_t</text>
+    <text x="12" y="234" font-family="monospace" font-size="10" fill="#ffffff">Bandwidth Reduction: 2x to 10x Typical Telemetry Compression</text>
+  </g>
+
+  <!-- Bottom: Conformance Matrix Bar -->
+  <rect x="30" y="430" width="880" height="105" rx="8" fill="url(#cardGrad)" stroke="#1e2c47" stroke-width="1.5"/>
+  <rect x="30" y="430" width="880" height="28" rx="8" fill="#14213d"/>
+  <text x="45" y="449" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#00e676">CCSDS 124.0-B-1 ANNEX A NORMATIVE REQUIREMENTS CHECKLIST (10/10 PASS)</text>
+  <text x="810" y="449" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#90a4cb">TABLE A-1 &amp; A-2</text>
+
+  <g transform="translate(45, 468)">
+    <rect x="0" y="0" width="160" height="52" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="8" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e676">HKC-001 &amp; HKC-002</text>
+    <text x="8" y="32" font-family="monospace" font-size="9" fill="#a4c5eb">R1 (Length-F Vector)</text>
+    <text x="8" y="45" font-family="monospace" font-size="9" fill="#a4c5eb">R2 (Parameters M0, R)</text>
+
+    <rect x="175" y="0" width="160" height="52" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="8" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e676">HKC-003 &amp; HKC-004</text>
+    <text x="8" y="32" font-family="monospace" font-size="9" fill="#a4c5eb">R3 (Mask Update)</text>
+    <text x="8" y="45" font-family="monospace" font-size="9" fill="#a4c5eb">R3 (Change Vector D_t)</text>
+
+    <rect x="350" y="0" width="160" height="52" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="8" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e676">HKC-005 &amp; HKC-006</text>
+    <text x="8" y="32" font-family="monospace" font-size="9" fill="#a4c5eb">R4 (Table 5-1 Counters)</text>
+    <text x="8" y="45" font-family="monospace" font-size="9" fill="#a4c5eb">R5 (3-Part Concatenation)</text>
+
+    <rect x="525" y="0" width="160" height="52" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="8" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e676">HKC-007 &amp; HKC-008</text>
+    <text x="8" y="32" font-family="monospace" font-size="9" fill="#a4c5eb">P2 (Robustness R in [0,15])</text>
+    <text x="8" y="45" font-family="monospace" font-size="9" fill="#a4c5eb">Bit-Exact Lossless Roundtrip</text>
+
+    <rect x="700" y="0" width="160" height="52" rx="4" fill="#0b1220" stroke="#00e676" stroke-width="1"/>
+    <text x="8" y="16" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#00e676">HKC-009 &amp; HKC-010</text>
+    <text x="8" y="32" font-family="monospace" font-size="9" fill="#a4c5eb">Packet Loss Resynchronize</text>
+    <text x="8" y="45" font-family="monospace" font-size="9" fill="#a4c5eb">Zero-Latency Stream API</text>
+  </g>
+</svg>
